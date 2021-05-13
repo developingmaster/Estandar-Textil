@@ -1,0 +1,303 @@
+/* Globals and Variables */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --color-btn: #747474;
+  --color-nav: #fff;
+  --color-bod: #000;
+  --color-pro: #272e42;
+  --color-light: #fff;
+  --font-h: "Barlow", sans-serif;
+  --font-n: "Barlow Condensed", sans-serif;
+  --font-p: "Montserrat", sans-serif;
+  --card-height: 600px;
+  --card-width: 100%;
+}
+
+/* Resets */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-p);
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  /* border: solid 1px red; */
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-h);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+i {
+  margin: 0 0 0 16px;
+}
+
+a {
+  color: var(--color-nav);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.container {
+  left: 0;
+  margin: 0 auto;
+  max-width: 1145px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.btn {
+  color: var(--color-nav);
+  background: var(--color-btn);
+  font-size: 18px;
+  opacity: 0.6;
+  padding: 20px 40px;
+  border: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.divider {
+  background: var(--color-bod);
+  height: 2px;
+  left: 0;
+  margin: 16px auto;
+  max-width: 300px;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.spacing {
+  margin: 200px 0 0 0;
+}
+
+.align-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pendiente por añadir */ /* <---------- */
+.light-text {
+  color: var(--color-light);
+}
+/* Header Block */
+
+.nav {
+  background: #000;
+}
+
+.nav--navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav--logo {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.nav--img {
+  margin: 32px 0;
+  width: 80px;
+}
+
+.nav--title {
+  font-family: var(--font-n);
+  font-size: 2rem;
+  margin: 0 0 0 16px;
+  text-transform: uppercase;
+}
+
+.nav--link {
+  margin: 0 0 0 32px;
+}
+
+/* Hero */
+
+.hero {
+  background: /*radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(144, 130, 133, 0.3) 100%
+    ),*/ url(../img/slider-img-1.jpg)
+    center / cover no-repeat;
+  min-height: 800px;
+  transition: all ease 2ms;
+}
+
+.hero > .container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  justify-content: space-evenly;
+  padding: 10% 10% 10% 0;
+}
+
+.hero--title {
+  color: var(--color-nav);
+}
+
+.hero--copy {
+  color: var(--color-nav);
+}
+
+/* About Block */
+
+.about--title {
+  text-align: center;
+}
+
+.about--text {
+  padding: 0 20%;
+  margin: 60px 0;
+}
+
+/* Cards Block */
+
+.card {
+  color: var(--color-nav);
+  position: relative;
+  margin: 0 0 60px 0;
+  height: var(--card-height);
+  width: var(--card-width);
+}
+
+.card--img {
+  height: inherit;
+  width: inherit;
+  z-index: 100;
+}
+
+.card--overlay {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(144, 130, 133, 0.3) 100%
+  );
+  top: 0;
+  height: inherit;
+  position: absolute;
+  width: 100%;
+  z-index: 200;
+}
+
+.card:hover .card--overlay {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(144, 130, 133, 0.5) 100%
+  );
+}
+
+.card--info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-evenly;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  top: 20%;
+  position: absolute;
+  width: 50%;
+  z-index: 300;
+}
+
+.card--info > i {
+  font-size: 30px;
+}
+
+/* Projects Block */
+
+.projects {
+  background: var(--color-pro);
+}
+
+.project--intro {
+  text-align: right;
+  padding: 60px 0;
+}
+
+.project {
+  display: flex;
+  padding: 50px 0;
+}
+
+.project--thumb {
+  position: relative;
+  top: -60px;
+  width: 50%;
+}
+
+.project--info {
+  margin: 0 0 0 60px;
+}
+
+.project--info > p {
+  margin: 0 0 16px 0;
+  padding: 0 7rem 0 0;
+}
+
+.project--title {
+  margin: 0 0 32px 0;
+}
+
+/* Why Us Block */
+
+.why-us {
+  background: var(--color-pro);
+  padding: 0 0 60px 0;
+}
+
+.why-us--intro {
+  margin: 0 0 32px 0;
+}
+
+.why-us--info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.why-us--details {
+  margin: 32px 16px;
+  width: 500px;
+  height: 100px;
+}
